@@ -7,7 +7,6 @@ import HomePage from "./views/main/HomePage/HomePage";
 function Pages() {
   return (
     <>
-      <App_bar />
       <HomePage />
     </>
   );

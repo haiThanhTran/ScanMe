@@ -10,6 +10,8 @@ import ShoppingCartComponent from "./components/Cart/ShoppingCartComponent ";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Provider } from "react-redux";
 import { GlobalProvider } from "./config/GlobalContext";
+import Header from "./pages/views/main/app_bar/App_bar";
+
 import store from "./redux/store";
 
 const theme = createTheme({
@@ -32,6 +34,7 @@ function App() {
       <GlobalProvider>
         <ThemeProvider theme={theme}>
           <Router>
+          <Header />
             <Routes>
               <Route path="/" element={<Pages />} />
               <Route path="/login" element={<Login />} />

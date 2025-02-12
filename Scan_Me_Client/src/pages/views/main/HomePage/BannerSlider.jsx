@@ -10,49 +10,49 @@ import slide4 from "../../../../assets/images/slide4.jpg";
 const banners = [
   {
     id: 1,
-    image: slide1,
+    image: "https://images.bloggiamgia.vn/full/10-02-2025/z6304812081242d45623b756fa3ab8e6eedef9170e93ba-1739183174108.jpg",
     title: "Laz Trợ Giá",
     link: "/promotion/lazada",
   },
   {
     id: 2,
-    image: slide2,
+    image: "https://images.bloggiamgia.vn/full/12-02-2025/Chinh15-1739356969800.png",
     title: "Valentine Sale",
     link: "/promotion/valentine",
   },
   {
     id: 3,
-    image: slide3,
+    image: "https://images.bloggiamgia.vn/full/12-02-2025/topbanchay-1739357538793.png",
     title: "LazMart Freeship",
     link: "/promotion/lazmart",
   },
   {
     id: 4,
-    image: slide4,
+    image: "https://images.bloggiamgia.vn/full/08-02-2025/mark-1738988101485.png",
     title: "Shopee Nổi Hình",
     link: "/promotion/shopee",
   },
   {
     id: 5,
-    image: slide1,
+    image: "https://images.bloggiamgia.vn/full/17-12-2024/Choice-1734430402100.png",
     title: "Laz Trợ Giá",
     link: "/promotion/lazada",
   },
   {
     id: 6,
-    image: slide2,
+    image: "https://images.bloggiamgia.vn/full/07-02-2025/hinh-1738919790223.png",
     title: "Valentine Sale",
     link: "/promotion/valentine",
   },
   {
     id: 7,
-    image: slide3,
+    image: "https://images.bloggiamgia.vn/full/17-12-2024/Choice-1734430402100.png",
     title: "LazMart Freeship",
     link: "/promotion/lazmart",
   },
   {
     id: 8,
-    image: slide4,
+    image: "https://images.bloggiamgia.vn/full/18-05-2024/Freeship-1715992975745.jpg",
     title: "Shopee Nổi Hình",
     link: "/promotion/shopee",
   },
@@ -79,7 +79,7 @@ const responsive = {
 const BannerSlider = () => {
   const handleDragStart = (e) => e.preventDefault();
   return (
-    <Box sx={{ mt: 8 }}>
+    <Box sx={{ mt: 3 }}>
       <Carousel
         responsive={responsive}
         ssr={true}
@@ -100,8 +100,8 @@ const BannerSlider = () => {
             component="a"
             href={banner.link}
             sx={{
-              width: "80%",
-              height: "80%",
+              width: "90%",
+              height: "90%",
               borderRadius: "10px",
               marginTop: "30px",
               marginRight: "30px",

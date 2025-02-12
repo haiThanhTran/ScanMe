@@ -87,7 +87,7 @@ const Header = () => {
     showToast.error(content);
   };
   return (
-    <Box sx={{ backgroundColor: "#FB5532" }}>
+    <Box sx={{ backgroundColor: "#FB5532",maxWidth: "100%" }}>
       <ToastContainer />
       <AppBar position="fixed">
         {/* Top toolbar with utility links */}
