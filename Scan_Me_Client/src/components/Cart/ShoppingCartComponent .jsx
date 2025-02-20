@@ -31,8 +31,8 @@ const ShoppingCart = () => {
   const initialCart = [
     { productId: "product-06", quantity: 2 },
     { productId: "product-03", quantity: 1 },
-    { productId: "product-01", quantity: 1 }, 
-    { productId: "product-02", quantity: 1 }, 
+    { productId: "product-01", quantity: 1 },
+    { productId: "product-02", quantity: 1 },
   ];
   const [cartItems, setCartItems] = useState(initialCart);
   const [groupedCartItems, setGroupedCartItems] = useState({});
@@ -100,7 +100,7 @@ const ShoppingCart = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginBottom: "100px" }}>
       {/* Navbar */}
       <AppBar position="static" color="default">
         <Toolbar>
