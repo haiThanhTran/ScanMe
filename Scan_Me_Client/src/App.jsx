@@ -11,6 +11,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Provider } from "react-redux";
 import { GlobalProvider } from "./config/GlobalContext";
 import Header from "./pages/views/main/app_bar/App_bar";
+import AdminFunction from "./pages/views/main/dashboard/AdminFunction";
+import { UserProvider, UserContext } from "./ultils/userContext";
 
 import store from "./redux/store";
 
@@ -30,22 +32,27 @@ const theme = createTheme({
 
 function App() {
   return (
-    <Provider store={store}>
-      <GlobalProvider>
-        <ThemeProvider theme={theme}>
-          <Router>
-          <Header />
-            <Routes>
-              <Route path="/" element={<Pages />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/cart" element={<ShoppingCartComponent />} />
-              <Route path="/upload-new-film" element={<TestUploadImage />} />
-              <Route path="/detail/:id" element={<Film_detail />} />
-            </Routes>
-          </Router>
-        </ThemeProvider>
-      </GlobalProvider>
-    </Provider>
+    <UserProvider>
+      <Provider store={store}>
+        <GlobalProvider>
+          <ThemeProvider theme={theme}>
+            <Router>
+              <Routes>
+                <Route path="/" element={<Pages />} />
+                <Route path="/signin" element={<Login />} />
+                <Route path="/cart" element={<ShoppingCartComponent />} />
+                <Route path="/upload-new-film" element={<TestUploadImage />} />
+                <Route path="/detail/:id" element={<Film_detail />} />
+                <Route
+                  path="/adminfunction/*"
+                  element={<AdminFunction />}
+                />{" "}
+              </Routes>
+            </Router>
+          </ThemeProvider>
+        </GlobalProvider>
+      </Provider>
+    </UserProvider>
   );
 }
 

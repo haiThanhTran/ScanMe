@@ -20,8 +20,12 @@ import { toast as showToast, ToastContainer } from "react-toastify";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { GlobalContext } from "../../../../config/GlobalContext";
 import { Badge } from "@mui/material";
+import logo from "../../../../assets/images/logo.png";
+import { UserContext } from "../../../../ultils/userContext";
 
 const Header = () => {
+  const { user, handleLogout } = useContext(UserContext);
+
   const navigate = useNavigate();
   const [value, setValue] = useState(0);
   const [userInfo, setUserInfo] = useState(null);
@@ -50,11 +54,6 @@ const Header = () => {
     { text: "Trung tâm hỗ trợ", path: "/support" },
     { text: "Tích điểm đổi quà", path: "/rewards" },
   ];
-  const handleLogout = () => {
-    // Clear localStorage
-    localStorage.clear();
-    window.location.reload();
-  };
 
   const handlePopoverOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -87,7 +86,7 @@ const Header = () => {
     showToast.error(content);
   };
   return (
-    <Box sx={{ backgroundColor: "#FB5532",maxWidth: "100%" }}>
+    <Box sx={{ backgroundColor: "#FB5532", maxWidth: "100%" }}>
       <ToastContainer />
       <AppBar position="fixed">
         {/* Top toolbar with utility links */}
@@ -155,7 +154,7 @@ const Header = () => {
           <Toolbar>
             <Box
               component="img"
-              src="https://play-lh.googleusercontent.com/G56PYaL36H1-DHDDpvNBup6Ihf-gPkEXGiYhxWq_u8kHizhM2ZDa7DFRFtacydBPuH6P"
+              src={logo}
               alt="Blog giảm giá"
               sx={{ width: 100, height: 100, mr: 2 }}
               onClick={() => handleNavigation("/")}
@@ -224,15 +223,15 @@ const Header = () => {
             </Box>
 
             <Box sx={{ ml: 2 }}>
-              {userInfo ? (
+              {user ? (
                 <Avatar onClick={handlePopoverOpen} sx={{ cursor: "pointer" }}>
-                  {userInfo?.fullName[0]}
+                  {user?.fullName[0]}
                 </Avatar>
               ) : (
                 <Button
                   variant="contained"
                   color="secondary"
-                  onClick={() => handleNavigation("/login")}
+                  onClick={() => handleNavigation("/signin")}
                   sx={{
                     fontWeight: 600,
                     backgroundColor: "#fff",
@@ -293,6 +292,16 @@ const Header = () => {
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
         transformOrigin={{ vertical: "top", horizontal: "center" }}
       >
+        <Button
+          onClick={() => navigate("/adminfunction/dashboard")}
+          sx={{
+            padding: "10px 20px",
+            backgroundColor: "#d32f2f",
+            color: "#fff",
+          }}
+        >
+          Bảng điều khiển
+        </Button>
         <Button
           onClick={handleLogout}
           sx={{

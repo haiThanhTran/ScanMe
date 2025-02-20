@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   TextField,
   Button,
@@ -11,6 +11,7 @@ import {
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { toast as showToast, ToastContainer } from "react-toastify"; // Renamed to avoid conflict
+import { UserContext } from "../../../../../ultils/userContext";
 
 import "react-toastify/dist/ReactToastify.css";
 import mockData from "../../../../../apis/mock-data";
@@ -18,6 +19,8 @@ import GoogleIcon from "@mui/icons-material/Google";
 import { useNavigate } from "react-router";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 const LoginForm = () => {
+  const { handleLoginSuccess } = useContext(UserContext);
+
   const { users } = mockData;
   const navigate = useNavigate();
   const formik = useFormik({
@@ -37,9 +40,14 @@ const LoginForm = () => {
         (u) => u.email === values.email && u.password === values.password
       );
       if (user) {
-        localStorage.setItem("authenticatedUser", JSON.stringify(user));
-        showToast.success("Login successful!");
-        navigate("/");
+        handleLoginSuccess(user);
+
+        if (user?.role === "shop") {
+          navigate("/adminfunction/dashboard");
+          showToast.success("Login successful!");
+        } else {
+          navigate("/");
+        }
       } else {
         showToast.error("Sai tài khoản hoặc mật khẩu");
       }
@@ -70,7 +78,7 @@ const LoginForm = () => {
             mb: 2,
             "&:hover": {
               cursor: "pointer",
-              color:"#115293"
+              color: "#115293",
             },
           }}
           onClick={() => navigate("/")}
@@ -91,7 +99,10 @@ const LoginForm = () => {
           Welcome back
         </Typography>
         <Typography variant="body2" color="textSecondary" gutterBottom>
-          Please enter your details
+          TK: customer@gmail.com || shop@gmail.com
+        </Typography>
+        <Typography variant="body2" color="textSecondary" gutterBottom>
+          MK: 12345678
         </Typography>
         <form onSubmit={formik.handleSubmit}>
           <TextField

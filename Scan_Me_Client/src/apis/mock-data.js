@@ -8,18 +8,40 @@ const mockData = {
       fullName: "Nguyễn Văn A",
       phoneNumber: "0901234567",
       address: "123 Đường A, Quận B, TP. Hà Nội",
-      role:"customer"
+      role: "customer",
     },
     {
-      id: "user-02",
-      username: "tranthib",
-      email: "tranthib@example.com",
-      password: "hashed_password_2",
+      id: "store-01",
+      storeId: "store-01",
+      username: "shopabc",
+      email: "shop@gmail.com",
+      password: "12345678",
       fullName: "Trần Thị B",
       phoneNumber: "0902345678",
       address: "456 Đường C, Quận D, TP. Hồ Chí Minh",
+      role: "shop",
     },
-    // Thêm người dùng khác nếu cần
+    {
+      id: "store-02",
+      storeId: "store-02",
+      username: "shopxyz",
+      email: "shopxyz@gmail.com",
+      password: "12345678",
+      fullName: "Lê Văn C",
+      phoneNumber: "0905678901",
+      address: "789 Đường E, Quận F, TP. Đà Nẵng",
+      role: "shop",
+    },
+    {
+      id: "user-03",
+      username: "admin123",
+      email: "admin@gmail.com",
+      password: "adminpassword",
+      fullName: "Admin User",
+      phoneNumber: "0901112222",
+      address: "Admin Office",
+      role: "admin",
+    },
   ],
   userVouchers: [
     {
@@ -37,6 +59,8 @@ const mockData = {
       address: "789 Đường E, Quận F, TP. Đà Nẵng",
       phoneNumber: "0903456789",
       email: "abcfashion@example.com",
+      platformDebt: 1500000,
+      platformDebtPaid: false,
     },
     {
       id: "store-02",
@@ -45,8 +69,9 @@ const mockData = {
       address: "321 Đường G, Quận H, TP. Cần Thơ",
       phoneNumber: "0904567890",
       email: "xyzaccessories@example.com",
+      platformDebt: 0,
+      platformDebtPaid: true,
     },
-    // Thêm cửa hàng khác nếu cần
     {
       id: "store-03",
       name: "Điện Máy 123",
@@ -54,6 +79,8 @@ const mockData = {
       address: "123 Nguyễn Văn Linh, Đà Nẵng",
       phoneNumber: "0905123456",
       email: "dienmay123@example.com",
+      platformDebt: 500000,
+      platformDebtPaid: false,
     },
     {
       id: "store-04",
@@ -62,6 +89,8 @@ const mockData = {
       address: "456 Lê Duẩn, Hà Nội",
       phoneNumber: "0906234567",
       email: "sachhay@example.com",
+      platformDebt: 200000,
+      platformDebtPaid: false,
     },
     {
       id: "store-05",
@@ -70,6 +99,8 @@ const mockData = {
       address: "789 Cách Mạng Tháng Tám, TP.HCM",
       phoneNumber: "0907345678",
       email: "thucphamantoan@example.com",
+      platformDebt: 100000,
+      platformDebtPaid: false,
     },
     {
       id: "store-06",
@@ -78,6 +109,8 @@ const mockData = {
       address: "321 Trần Phú, Nha Trang",
       phoneNumber: "0908456789",
       email: "noithatdep@example.com",
+      platformDebt: 0,
+      platformDebtPaid: true,
     },
     {
       id: "store-07",
@@ -86,6 +119,8 @@ const mockData = {
       address: "123 Hai Bà Trưng, Huế",
       phoneNumber: "0909567890",
       email: "dochoitreem@example.com",
+      platformDebt: 300000,
+      platformDebtPaid: false,
     },
     {
       id: "store-08",
@@ -94,6 +129,8 @@ const mockData = {
       address: "456 Hùng Vương, Quy Nhơn",
       phoneNumber: "0901678901",
       email: "dienthoaigiare@example.com",
+      platformDebt: 700000,
+      platformDebtPaid: false,
     },
     {
       id: "store-09",
@@ -102,6 +139,8 @@ const mockData = {
       address: "789 Nguyễn Huệ, Vũng Tàu",
       phoneNumber: "0902789012",
       email: "myphamxachtay@example.com",
+      platformDebt: 900000,
+      platformDebtPaid: false,
     },
     {
       id: "store-10",
@@ -110,6 +149,8 @@ const mockData = {
       address: "321 Ngô Quyền, Đà Lạt",
       phoneNumber: "0903890123",
       email: "giaydepthoitrang@example.com",
+      platformDebt: 1200000,
+      platformDebtPaid: false,
     },
     {
       id: "store-11",
@@ -118,6 +159,8 @@ const mockData = {
       address: "123 Pasteur, Cần Thơ",
       phoneNumber: "0904901234",
       email: "vanphongpham@example.com",
+      platformDebt: 400000,
+      platformDebtPaid: false,
     },
   ],
   products: [
@@ -131,7 +174,9 @@ const mockData = {
       stock: 50,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf96yzqqr4ay63@resize_w450_nl.webp",
-      sold: 20, // Added 'sold' property
+      sold: 150,
+      cost: 200000,
+      rating: 4.5,
     },
     {
       id: "product-02",
@@ -143,9 +188,10 @@ const mockData = {
       stock: 30,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m5v88wnkro7rbc@resize_w450_nl.webp",
-      sold: 15, // Added 'sold' property
+      sold: 220,
+      cost: 250000,
+      rating: 4.8,
     },
-    // Thêm sản phẩm khác nếu cần
     {
       id: "product-03",
       storeId: "store-03",
@@ -156,7 +202,9 @@ const mockData = {
       stock: 20,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lyxdkpxhap4165@resize_w450_nl.webp",
-      sold: 8, // Added 'sold' property
+      sold: 85,
+      cost: 8000000,
+      rating: 4.2,
     },
     {
       id: "product-04",
@@ -168,7 +216,9 @@ const mockData = {
       stock: 100,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134201-7ras8-m3a4guov37qkcf@resize_w450_nl.webp",
-      sold: 60, // Added 'sold' property
+      sold: 300,
+      cost: 40000,
+      rating: 4.9,
     },
     {
       id: "product-05",
@@ -180,7 +230,9 @@ const mockData = {
       stock: 80,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-llzwjmszz10f88@resize_w450_nl.webp",
-      sold: 45, // Added 'sold' property
+      sold: 450,
+      cost: 80000,
+      rating: 4.7,
     },
     {
       id: "product-06",
@@ -192,11 +244,13 @@ const mockData = {
       stock: 10,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwmokz46lr6h8a@resize_w450_nl.webp",
-      sold: 3, // Added 'sold' property
+      sold: 60,
+      cost: 5000000,
+      rating: 4.0,
     },
     {
       id: "product-07",
-      storeId: "store-08",
+      storeId: "store-07",
       name: "Bộ Xếp Hình LEGO",
       description: "Bộ xếp hình LEGO cho bé từ 5 tuổi.",
       price: 600000,
@@ -204,7 +258,9 @@ const mockData = {
       stock: 40,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfc2wgcqmf794d@resize_w450_nl.webp",
-      sold: 28, // Added 'sold' property
+      sold: 180,
+      cost: 300000,
+      rating: 4.6,
     },
     {
       id: "product-08",
@@ -216,7 +272,9 @@ const mockData = {
       stock: 15,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-llm05p5nrfloa9@resize_w450_nl.webp",
-      sold: 10, // Added 'sold' property
+      sold: 120,
+      cost: 20000000,
+      rating: 4.3,
     },
     {
       id: "product-09",
@@ -228,7 +286,9 @@ const mockData = {
       stock: 60,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134201-7ras8-m601g2ig4ml38c@resize_w450_nl.webp",
-      sold: 35, // Added 'sold' property
+      sold: 250,
+      cost: 150000,
+      rating: 4.8,
     },
     {
       id: "product-10",
@@ -240,7 +300,9 @@ const mockData = {
       stock: 25,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m0hb5ycxh4svb3@resize_w450_nl.webp",
-      sold: 18, // Added 'sold' property
+      sold: 160,
+      cost: 900000,
+      rating: 4.4,
     },
     {
       id: "product-11",
@@ -252,7 +314,9 @@ const mockData = {
       stock: 200,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmefmw2y16u796@resize_w450_nl.webp",
-      sold: 110, // Added 'sold' property
+      sold: 800,
+      cost: 2000,
+      rating: 4.9,
     },
     {
       id: "product-12",
@@ -264,7 +328,9 @@ const mockData = {
       stock: 45,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-ljkugs5xha5w80@resize_w450_nl.webp",
-      sold: 22, // Added 'sold' property
+      sold: 120,
+      cost: 150000,
+      rating: 4.2,
     },
     {
       id: "product-13",
@@ -276,7 +342,9 @@ const mockData = {
       stock: 35,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf9l7u7fkbbrff@resize_w450_nl.webp",
-      sold: 17, // Added 'sold' property
+      sold: 110,
+      cost: 200000,
+      rating: 4.6,
     },
     {
       id: "product-14",
@@ -288,7 +356,9 @@ const mockData = {
       stock: 18,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m4pvwh6hogogbd@resize_w450_nl.webp",
-      sold: 6, // Added 'sold' property
+      sold: 55,
+      cost: 5000000,
+      rating: 4.1,
     },
     {
       id: "product-15",
@@ -300,7 +370,9 @@ const mockData = {
       stock: 90,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/fe004e3833274318f800fd13162a4f15@resize_w450_nl.webp",
-      sold: 50, // Added 'sold' property
+      sold: 280,
+      cost: 30000,
+      rating: 4.7,
     },
     {
       id: "product-16",
@@ -312,7 +384,9 @@ const mockData = {
       stock: 120,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/53a7655e501f7db7f58a1c7e7b89a167@resize_w450_nl.webp",
-      sold: 75, // Added 'sold' property
+      sold: 600,
+      cost: 20000,
+      rating: 4.9,
     },
     {
       id: "product-17",
@@ -324,7 +398,9 @@ const mockData = {
       stock: 8,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m5wqlh0ln7p4f1@resize_w450_nl.webp",
-      sold: 2, // Added 'sold' property
+      sold: 45,
+      cost: 3000000,
+      rating: 4.3,
     },
     {
       id: "product-18",
@@ -336,7 +412,9 @@ const mockData = {
       stock: 50,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/sg-11134201-7rbnh-ll6ynqzeg11121@resize_w450_nl.webp",
-      sold: 30, // Added 'sold' property
+      sold: 210,
+      cost: 180000,
+      rating: 4.5,
     },
     {
       id: "product-19",
@@ -348,7 +426,9 @@ const mockData = {
       stock: 20,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m4vngba9368n45@resize_w450_nl.webp",
-      sold: 12, // Added 'sold' property
+      sold: 90,
+      cost: 3500000,
+      rating: 4.2,
     },
     {
       id: "product-20",
@@ -360,7 +440,9 @@ const mockData = {
       stock: 70,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134201-7ras8-m5co5gbetf3s2b@resize_w450_nl.webp",
-      sold: 40, // Added 'sold' property
+      sold: 280,
+      cost: 120000,
+      rating: 4.8,
     },
     {
       id: "product-21",
@@ -372,7 +454,9 @@ const mockData = {
       stock: 30,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lnwpsg0ma2ul1e@resize_w450_nl.webp",
-      sold: 15, // Added 'sold' property
+      sold: 155,
+      cost: 450000,
+      rating: 4.4,
     },
     {
       id: "product-22",
@@ -384,7 +468,9 @@ const mockData = {
       stock: 150,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m4k6ef2xj0934c@resize_w450_nl.webp",
-      sold: 90, // Added 'sold' property
+      sold: 750,
+      cost: 25000,
+      rating: 4.9,
     },
     {
       id: "product-23",
@@ -396,7 +482,9 @@ const mockData = {
       stock: 38,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lz02r6m8vyodc8@resize_w450_nl.webp",
-      sold: 19, // Added 'sold' property
+      sold: 115,
+      cost: 250000,
+      rating: 4.3,
     },
     {
       id: "product-24",
@@ -408,7 +496,9 @@ const mockData = {
       stock: 22,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m6205h2q1j435f@resize_w450_nl.webp",
-      sold: 11, // Added 'sold' property
+      sold: 95,
+      cost: 350000,
+      rating: 4.5,
     },
     {
       id: "product-25",
@@ -420,7 +510,9 @@ const mockData = {
       stock: 12,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/5bc55d56b101a5a3a86ad662b5f6ead4@resize_w450_nl.webp",
-      sold: 5, // Added 'sold' property
+      sold: 40,
+      cost: 6500000,
+      rating: 4.0,
     },
     {
       id: "product-26",
@@ -432,7 +524,9 @@ const mockData = {
       stock: 75,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/sg-11134201-7rbmn-lmjp510cphsbe0.webp",
-      sold: 38, // Added 'sold' property
+      sold: 260,
+      cost: 35000,
+      rating: 4.8,
     },
     {
       id: "product-27",
@@ -444,7 +538,9 @@ const mockData = {
       stock: 95,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lshwhvh43dtw00@resize_w450_nl.webp",
-      sold: 55, // Added 'sold' property
+      sold: 380,
+      cost: 50000,
+      rating: 4.7,
     },
     {
       id: "product-28",
@@ -456,7 +552,9 @@ const mockData = {
       stock: 5,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m1f8mqy2jgbca5@resize_w450_nl.webp",
-      sold: 1, // Added 'sold' property
+      sold: 35,
+      cost: 4000000,
+      rating: 4.0,
     },
     {
       id: "product-29",
@@ -468,7 +566,9 @@ const mockData = {
       stock: 60,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lqgnkvi6ukoned@resize_w450_nl.webp",
-      sold: 32, // Added 'sold' property
+      sold: 230,
+      cost: 250000,
+      rating: 4.6,
     },
     {
       id: "product-30",
@@ -480,7 +580,9 @@ const mockData = {
       stock: 100,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/sg-11134201-7rd5z-lwzf00e5mc4p56@resize_w450_nl.webp",
-      sold: 60, // Added 'sold' property
+      sold: 480,
+      cost: 40000,
+      rating: 4.8,
     },
     {
       id: "product-31",
@@ -492,7 +594,9 @@ const mockData = {
       stock: 45,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lzpvpxz7411pd8@resize_w450_nl.webp",
-      sold: 25, // Added 'sold' property
+      sold: 190,
+      cost: 1000000,
+      rating: 4.4,
     },
     {
       id: "product-32",
@@ -504,7 +608,9 @@ const mockData = {
       stock: 55,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-libc04oprlzg39@resize_w450_nl.webp",
-      sold: 30, // Added 'sold' property
+      sold: 220,
+      cost: 120000,
+      rating: 4.6,
     },
     {
       id: "product-33",
@@ -516,7 +622,9 @@ const mockData = {
       stock: 180,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m0fh82yuy1gt76@resize_w450_nl.webp",
-      sold: 100, // Added 'sold' property
+      sold: 650,
+      cost: 15000,
+      rating: 4.8,
     },
     {
       id: "product-34",
@@ -528,7 +636,9 @@ const mockData = {
       stock: 30,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmttsfaxyztrad@resize_w450_nl.webp",
-      sold: 16, // Added 'sold' property
+      sold: 130,
+      cost: 300000,
+      rating: 4.3,
     },
     {
       id: "product-35",
@@ -540,7 +650,9 @@ const mockData = {
       stock: 28,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m1ry5is3cddr73@resize_w450_nl.webp",
-      sold: 14, // Added 'sold' property
+      sold: 115,
+      cost: 200000,
+      rating: 4.5,
     },
     {
       id: "product-36",
@@ -552,7 +664,9 @@ const mockData = {
       stock: 10,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m0opeebz98r354@resize_w450_nl.webp",
-      sold: 4, // Added 'sold' property
+      sold: 35,
+      cost: 5500000,
+      rating: 4.1,
     },
     {
       id: "product-37",
@@ -564,7 +678,9 @@ const mockData = {
       stock: 85,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/67d0ef3d3fc8897213c9a1f84ee561e1@resize_w450_nl.webp",
-      sold: 42, // Added 'sold' property
+      sold: 270,
+      cost: 30000,
+      rating: 4.7,
     },
     {
       id: "product-38",
@@ -576,7 +692,9 @@ const mockData = {
       stock: 150,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m5atl6l08d8j8f@resize_w450_nl.webp",
-      sold: 90, // Added 'sold' property
+      sold: 550,
+      cost: 15000,
+      rating: 4.8,
     },
     {
       id: "product-39",
@@ -588,7 +706,9 @@ const mockData = {
       stock: 7,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m3r7rcn4h8709e@resize_w450_nl.webp",
-      sold: 3, // Added 'sold' property
+      sold: 30,
+      cost: 3200000,
+      rating: 4.1,
     },
     {
       id: "product-40",
@@ -600,7 +720,9 @@ const mockData = {
       stock: 55,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m1l6ny7nv5q715@resize_w450_nl.webp",
-      sold: 33, // Added 'sold' property
+      sold: 240,
+      cost: 150000,
+      rating: 4.5,
     },
     {
       id: "product-41",
@@ -612,7 +734,9 @@ const mockData = {
       stock: 40,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m622r7zp9dme60@resize_w450_nl.webp",
-      sold: 24, // Added 'sold' property
+      sold: 180,
+      cost: 200000,
+      rating: 4.3,
     },
     {
       id: "product-42",
@@ -624,7 +748,9 @@ const mockData = {
       stock: 80,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134201-7ras8-m5onhwyrwc8z9c@resize_w450_nl.webp",
-      sold: 48, // Added 'sold' property
+      sold: 320,
+      cost: 90000,
+      rating: 4.7,
     },
     {
       id: "product-43",
@@ -636,7 +762,9 @@ const mockData = {
       stock: 40,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m4zuedprkncma5@resize_w450_nl.webp",
-      sold: 20, // Added 'sold' property
+      sold: 170,
+      cost: 550000,
+      rating: 4.4,
     },
     {
       id: "product-44",
@@ -648,7 +776,9 @@ const mockData = {
       stock: 250,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lw6pxcyoe8d7d0@resize_w450_nl.webp",
-      sold: 150, // Added 'sold' property
+      sold: 900,
+      cost: 3000,
+      rating: 4.9,
     },
     {
       id: "product-45",
@@ -660,7 +790,9 @@ const mockData = {
       stock: 25,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m60m1vuy4k5fa8@resize_w450_nl.webp",
-      sold: 13, // Added 'sold' property
+      sold: 100,
+      cost: 400000,
+      rating: 4.2,
     },
     {
       id: "product-46",
@@ -672,7 +804,9 @@ const mockData = {
       stock: 15,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lrchaqqwv1cp06@resize_w450_nl.webp",
-      sold: 7, // Added 'sold' property
+      sold: 65,
+      cost: 700000,
+      rating: 4.3,
     },
     {
       id: "product-47",
@@ -684,7 +818,9 @@ const mockData = {
       stock: 30,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-loxhzltrznfff5@resize_w450_nl.webp",
-      sold: 18, // Added 'sold' property
+      sold: 120,
+      cost: 280000,
+      rating: 4.1,
     },
     {
       id: "product-48",
@@ -696,7 +832,9 @@ const mockData = {
       stock: 65,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m3r6ha8tcdd43f@resize_w450_nl.webp",
-      sold: 32, // Added 'sold' property
+      sold: 250,
+      cost: 45000,
+      rating: 4.7,
     },
     {
       id: "product-49",
@@ -708,7 +846,9 @@ const mockData = {
       stock: 180,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgzzltuabub6d9@resize_w450_nl.webp",
-      sold: 110, // Added 'sold' property
+      sold: 700,
+      cost: 10000,
+      rating: 4.8,
     },
     {
       id: "product-50",
@@ -720,7 +860,9 @@ const mockData = {
       stock: 12,
       imageUrl:
         "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m1ha9lpj6a8jc1@resize_w450_nl.webp",
-      sold: 6, // Added 'sold' property
+      sold: 50,
+      cost: 400000,
+      rating: 4.2,
     }
   ],
   vouchers: [
@@ -748,46 +890,35 @@ const mockData = {
       category: null,
       productIds: ["product-01"],
     },
-    // Thêm voucher khác nếu cần
+    {
+      id: "voucher-03",
+      code: "DIENMAY10",
+      discountPercentage: 10,
+      quantity: 200,
+      validFrom: "2025-03-01T00:00:00",
+      validTo: "2025-03-31T23:59:59",
+      description: "Giảm 10% cho tất cả sản phẩm điện máy.",
+      type: "category",
+      category: "Điện máy",
+      productIds: null,
+    },
+    {
+      id: "voucher-04",
+      code: "SACH20K",
+      discountAmount: 20000,
+      quantity: 150,
+      validFrom: "2025-04-15T00:00:00",
+      validTo: "2025-04-30T23:59:59",
+      description: "Giảm 20,000 VND cho đơn hàng sách từ 100,000 VND.",
+      type: "order",
+      category: "Sách",
+      productIds: null,
+      minOrderValue: 100000,
+    },
   ],
   orders: [
-    {
-      id: "order-01",
-      userId: "user-01",
-      storeId: "store-01",
-      products: [
-        {
-          productId: "product-01",
-          quantity: 2,
-          price: 350000,
-          originalPrice: 350000,
-          finalPrice: 315000, // Đã giảm 10%
-          voucher: {
-            code: "SALE15",
-            discountPercent: 10, // Giảm giá 10% cho sản phẩm này
-            platformCommissionPercent: 5, // Hoa hồng nền tảng 5%
-          },
-          platformCommission: 35000, // 5% của (2 * 350,000)
-        },
-        {
-          productId: "product-02",
-          quantity: 1,
-          price: 500000,
-          originalPrice: 500000,
-          finalPrice: 500000, // Không giảm giá
-          voucher: null, // Không áp dụng voucher
-          platformCommission: 25000, // Hoa hồng nền tảng 5%
-        },
-        // Thêm các sản phẩm khác trong đơn hàng nếu cần
-      ],
-      totalPlatformCommission: 60000, // Tổng hoa hồng nền tảng cho đơn hàng
-      status: "confirmed", // Trạng thái đơn hàng đã được cửa hàng xác nhận
-      createdAt: "2025-02-05T10:00:00Z",
-      // Các thông tin khác của đơn hàng
-    },
-    // Thêm các đơn hàng khác nếu cần
+    // ... (Orders data will be inserted here - see below)
   ],
-
   categories: [
     {
       id: "category-01",
@@ -807,7 +938,6 @@ const mockData = {
       imageUrl:
         "https://down-vn.img.susercontent.com/file/8e71245b9659ea72c1b4e737be5cf42e@resize_w320_nl.webp",
     },
-    // Thêm danh mục khác nếu cần
     {
       id: "category-04",
       name: "Điện máy",
@@ -866,12 +996,11 @@ const mockData = {
     {
       id: "review-01",
       productId: "product-01",
-      userId: "user-02",
+      userId: "user-01",
       rating: 4,
       comment: "Áo đẹp, chất liệu tốt nhưng giao hàng hơi chậm.",
       reviewDate: "2025-02-07T09:30:00",
     },
-    // Thêm đánh giá khác nếu cần
   ],
   cart: [
     {
@@ -883,8 +1012,51 @@ const mockData = {
         },
       ],
     },
-    // Thêm giỏ hàng khác nếu cần
   ],
 };
+
+// Function to generate orders data
+function generateOrders(numOrders = 100) {
+  const orders = [];
+  const productIds = mockData.products.map(p => p.id);
+  const storeIds = mockData.stores.map(s => s.id);
+  const userIds = mockData.users.filter(u => u.role === 'customer').map(u => u.id);
+  const orderStatuses = ["pending", "confirmed", "processing", "shipped", "delivered", "cancelled", "returned"];
+
+  for (let i = 1; i <= numOrders; i++) {
+    const orderDate = new Date();
+    orderDate.setDate(orderDate.getDate() - Math.floor(Math.random() * 180)); // Orders within last 6 months
+    const month = orderDate.getMonth();
+    const year = orderDate.getFullYear();
+
+    const numItems = Math.floor(Math.random() * 5) + 1; // 1 to 5 items per order
+    const productsInOrder = [];
+    let orderValue = 0;
+
+    for (let j = 0; j < numItems; j++) {
+      const productId = productIds[Math.floor(Math.random() * productIds.length)];
+      const product = mockData.products.find(p => p.id === productId);
+      const quantity = Math.floor(Math.random() * 3) + 1; // 1 to 3 quantity
+      const price = product.price;
+      const productValue = price * quantity;
+      orderValue += productValue;
+      productsInOrder.push({ productId, quantity, price });
+    }
+
+    orders.push({
+      id: `order-${String(i).padStart(3, '0')}`,
+      userId: userIds[Math.floor(Math.random() * userIds.length)],
+      storeId: storeIds[Math.floor(Math.random() * storeIds.length)],
+      products: productsInOrder,
+      totalPlatformCommission: Math.round(orderValue * 0.05), // 5% commission
+      status: orderStatuses[Math.floor(Math.random() * orderStatuses.length)],
+      createdAt: orderDate.toISOString(),
+      orderValue: orderValue,
+    });
+  }
+  return orders;
+}
+
+mockData.orders = generateOrders(150); // Generate 150 orders and add to mockData
 
 export default mockData;
