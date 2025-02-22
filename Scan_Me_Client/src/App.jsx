@@ -15,6 +15,7 @@ import AdminFunction from "./pages/views/main/dashboard/AdminFunction";
 import { UserProvider, UserContext } from "./ultils/userContext";
 
 import store from "./redux/store";
+import Vouchers from "./pages/views/main/app_bar/Voucher/Voucher";
 
 const theme = createTheme({
   typography: {
@@ -38,7 +39,18 @@ function App() {
           <ThemeProvider theme={theme}>
             <Router>
               <Routes>
-                <Route path="/" element={<Pages />} />
+                <Route
+                  path="/*"
+                  element={
+                    <div>
+                      <Header />
+                      <Routes>
+                        <Route path="/" element={<Pages />} />
+                        <Route path="/vouchers" element={<Vouchers />} />
+                      </Routes>
+                    </div>
+                  }
+                />
                 <Route path="/signin" element={<Login />} />
                 <Route path="/cart" element={<ShoppingCartComponent />} />
                 <Route path="/upload-new-film" element={<TestUploadImage />} />

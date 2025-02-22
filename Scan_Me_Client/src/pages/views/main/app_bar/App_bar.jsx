@@ -91,7 +91,7 @@ const Header = () => {
       <AppBar position="fixed">
         {/* Top toolbar with utility links */}
         <Container
-          maxWidth="xl"
+          maxWidth="2xl"
           sx={{
             backgroundColor: "#D52220",
             height: "30px",
@@ -150,7 +150,7 @@ const Header = () => {
         </Container>
 
         {/* Main header with logo, search, and navigation */}
-        <Container maxWidth="xl" sx={{ backgroundColor: "#EE2624" }}>
+        <Container maxWidth="2xl" sx={{ backgroundColor: "#EE2624" }}>
           <Toolbar>
             <Box
               component="img"

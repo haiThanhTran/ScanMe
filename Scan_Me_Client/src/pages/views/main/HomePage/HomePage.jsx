@@ -1,6 +1,6 @@
 import BannerSlider from "./BannerSlider";
 import ProductLayout from "../../../../components/ProductList/ProductList";
-import Footer from "../../../../components/Footer/Footer";
+import Footer from "../../../views/main/footer/Footer";
 
 const HomePage = () => {
   return (
