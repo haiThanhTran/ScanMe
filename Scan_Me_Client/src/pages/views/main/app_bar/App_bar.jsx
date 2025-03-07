@@ -225,7 +225,7 @@ const Header = () => {
             <Box sx={{ ml: 2 }}>
               {user ? (
                 <Avatar onClick={handlePopoverOpen} sx={{ cursor: "pointer" }}>
-                  {user?.fullName[0]}
+                  {user?.fullName}
                 </Avatar>
               ) : (
                 <Button

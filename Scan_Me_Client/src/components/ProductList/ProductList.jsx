@@ -15,14 +15,16 @@ import {
   Badge,
   IconButton,
   Tooltip,
+  Rating,
 } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { GlobalContext } from "../../config/GlobalContext";
 function ProductLayout() {
   const [visibleProducts, setVisibleProducts] = useState(24);
-  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);
-
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
 
   const handleShowMore = () => {
     setVisibleProducts(mockData.products.length);
@@ -30,7 +32,9 @@ function ProductLayout() {
 
   const handleAddToCart = (productId) => {
     const updatedCart = [...cart];
-    const existingItem = updatedCart.find(item => item.productId === productId);
+    const existingItem = updatedCart.find(
+      (item) => item.productId === productId
+    );
 
     if (existingItem) {
       existingItem.quantity += 1;
@@ -114,112 +118,130 @@ function ProductLayout() {
         {/* Products Grid */}
         <Box sx={{ mb: 3 }}>
           <Grid container spacing={2}>
-            {mockData.products.slice(0, visibleProducts).map((product) => (
-              <Grid item xs={12} sm={6} md={4} lg={2} key={product.id}>
-                <Card
-                  sx={{
-                    borderRadius: "0.1px",
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    cursor: "pointer",
-                    position: "relative",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                    "&:hover": {
-                      transform: "scale(1.01)",
-                      boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.15)",
-                      "& .product-details": {
-                        display: "flex",
+            {mockData.products.slice(0, visibleProducts).map((product) => {
+              const rating = Math.floor(Math.random() * 11) / 2; // Random từ 0 đến 5, bước 0.5
+              return (
+                <Grid item xs={12} sm={6} md={4} lg={2} key={product.id}>
+                  <Card
+                    sx={{
+                      borderRadius: "0.1px",
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      cursor: "pointer",
+                      position: "relative",
+                      transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                      "&:hover": {
+                        transform: "scale(1.01)",
+                        boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.15)",
+                        "& .product-details": {
+                          display: "flex",
+                        },
                       },
-                    },
-                  }}
-                >
-                  <Box sx={{ position: "relative" }}>
-                    <CardMedia
-                      component="img"
-                      height="200"
-                      image={product.imageUrl}
-                      alt={product.name}
-                    />
-                    <Chip
-                      label="-10%"
-                      size="small"
-                      sx={{
-                        borderRadius: "1px",
-                        position: "absolute",
-                        top: 0,
-                        right: 0,
-                        backgroundColor: "#ee4d2d",
-                        color: "white",
-                      }}
-                    />
-                  </Box>
-                  <CardContent sx={{ flexGrow: 1, pb: 1 }}>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        height: 40,
-                        overflow: "hidden",
-                        mb: 1,
-                      }}
-                    >
-                      {product.name}
-                    </Typography>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Box>
-                        <Typography
-                          sx={{
-                            color: "#ee4d2d",
-                            fontWeight: "bold",
-                          }}
-                        >
-                          ₫{product.price.toLocaleString()}
-                        </Typography>
-                        <Typography
-                          variant="caption"
-                          sx={{
-                            textDecoration: "line-through",
-                            color: "text.secondary",
-                          }}
-                        >
-                          ₫{(product.price * 1.1).toLocaleString()}
-                        </Typography>
-                      </Box>
-                      <Box
-                        sx={{ display: "flex", alignItems: "center", gap: 1 }}
+                    }}
+                  >
+                    <Box sx={{ position: "relative" }}>
+                      <CardMedia
+                        component="img"
+                        height="200"
+                        image={product.imageUrl}
+                        alt={product.name}
+                      />
+                      <Chip
+                        label="-10%"
+                        size="small"
+                        sx={{
+                          borderRadius: "1px",
+                          position: "absolute",
+                          top: 0,
+                          right: 0,
+                          backgroundColor: "#ee4d2d",
+                          color: "white",
+                        }}
+                      />
+                    </Box>
+                    <CardContent sx={{ flexGrow: 1, pb: 1 }}>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          height: 40,
+                          overflow: "hidden",
+                          mb: 1,
+                        }}
                       >
-                        <Typography variant="caption" color="text.secondary">
-                          Đã bán {product.sold}
-                        </Typography>
-                        <Tooltip title="Thêm vào giỏ hàng">
-                          <IconButton
-                            size="small"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleAddToCart(product.id);
-                            }}
+                        {product.name}
+                      </Typography>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                        }}
+                      >
+                        <Box>
+                          <Typography
                             sx={{
                               color: "#ee4d2d",
-                              "&:hover": {
-                                backgroundColor: "rgba(238, 77, 45, 0.04)",
-                              },
+                              fontWeight: "bold",
                             }}
                           >
-                            <AddShoppingCartIcon />
-                          </IconButton>
-                        </Tooltip>
+                            ₫{product.price.toLocaleString()}
+                          </Typography>
+                          <Typography
+                            variant="caption"
+                            sx={{
+                              textDecoration: "line-through",
+                              color: "text.secondary",
+                            }}
+                          >
+                            ₫{(product.price * 1.1).toLocaleString()}
+                          </Typography>
+                        </Box>
+                        <Box
+                          sx={{ display: "flex", alignItems: "center", gap: 1 }}
+                        >
+                          <Typography variant="caption" color="text.secondary">
+                            Đã bán {product.sold}
+                          </Typography>
+                          <Tooltip title="Thêm vào giỏ hàng">
+                            <IconButton
+                              size="small"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleAddToCart(product.id);
+                              }}
+                              sx={{
+                                color: "#ee4d2d",
+                                "&:hover": {
+                                  backgroundColor: "rgba(238, 77, 45, 0.04)",
+                                },
+                              }}
+                            >
+                              <AddShoppingCartIcon />
+                            </IconButton>
+                          </Tooltip>
+                        </Box>
                       </Box>
-                    </Box>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
+                      {/* Thêm thanh 5 sao đánh giá */}
+                      <Box
+                        sx={{
+                          display: "flex",
+                          justifyContent: "center",
+                          mt: 1,
+                        }}
+                      >
+                        <Rating
+                          value={rating}
+                          precision={0.5}
+                          readOnly
+                          size="small"
+                        />
+                      </Box>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              );
+            })}
           </Grid>
         </Box>
 
@@ -272,7 +294,7 @@ function ProductLayout() {
                 >
                   <Box
                     component="img"
-                    src="/api/placeholder/50/50"
+                    src={store.image}
                     alt={store.name}
                     sx={{
                       width: 50,

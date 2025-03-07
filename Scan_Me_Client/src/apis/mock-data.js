@@ -54,7 +54,8 @@ const mockData = {
   stores: [
     {
       id: "store-01",
-      name: "Thời Trang ABC",
+      name: "Cơm Lan Anh",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t1.6435-9/48408750_807791526227601_2346586469142888448_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=536f4a&_nc_eui2=AeEsB-PFnq8P9CVJ_uRf0VKZAWzCeyFhoC4BbMJ7IWGgLlkw7b18Pi7qsd1QOpiyIlmdMWwywTuHUARiHSfRCdfl&_nc_ohc=-F0FVjE56-UQ7kNvgG8qEMx&_nc_oc=AdiiMejqxYh1e4j6p98bRLPCpYRak514qg_XO4zxxSUv5Xgkw64r0MPLRJqi7D_OimI&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=At2gIfuMRQ3awweZ0KoyDtf&oh=00_AYFfBW_3qgQb3MCfPD9YgNyK9ZGkuOWqe-8RVh5vxCb9ag&oe=67F286D4",
       description: "Chuyên cung cấp quần áo thời trang nam nữ.",
       address: "789 Đường E, Quận F, TP. Đà Nẵng",
       phoneNumber: "0903456789",
@@ -64,7 +65,9 @@ const mockData = {
     },
     {
       id: "store-02",
-      name: "Phụ Kiện XYZ",
+      name: "Gà Tê Tê",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/473081067_122182331252261144_4377937035876382919_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH_vOFovvNTMWS5iyX5aW98nBmzpvwTPDCcGbOm_BM8MCTZtn8wis3N551ZxVBy2HgtBwdznsiCm6hqDqFfx4gX&_nc_ohc=laxSMQstR18Q7kNvgEHgDFj&_nc_oc=AdgopjsbbiP9U4ysRLohkZh5Q3krg-FP1FTKq3GoWe--BjJHM7EUg-b2IviHruZebZ8&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=AkLiZefPzmRbm5QD24nZIKA&oh=00_AYGVqx2W0j9uQTDesOABNE-I8wxU-lvTVW_3_-EsFmUClA&oe=67D0FFBF",
+
       description: "Cửa hàng phụ kiện thời trang cao cấp.",
       address: "321 Đường G, Quận H, TP. Cần Thơ",
       phoneNumber: "0904567890",
@@ -74,7 +77,9 @@ const mockData = {
     },
     {
       id: "store-03",
-      name: "Điện Máy 123",
+      name: "Bún đậu Đồng Mô",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/481784165_955623666676237_7348668214124088283_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGwF82jGdONX9ieGjjlZ8KNkan9dw96_byRqf13D3r9vAsi5-v8vsoQOMfcGONQhwzxiwydo_Oi5bc54odznFry&_nc_ohc=2z2hZOP-fFMQ7kNvgFU5Y7u&_nc_oc=AdiWflPBBenFeTAP7HqwbTiZhEXQnMLI6F2SyKNEze5czf-RffspeA6Yc5i8A3_EQuU&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=Ami3mrm-lI5_6CX_Xb0ou83&oh=00_AYFj0bXXBEUtugrp8T-6bWqXbDCYkS4Km02OT-Da0ZqihQ&oe=67D0E07B",
+
       description: "Cung cấp các sản phẩm điện máy gia dụng.",
       address: "123 Nguyễn Văn Linh, Đà Nẵng",
       phoneNumber: "0905123456",
@@ -84,7 +89,9 @@ const mockData = {
     },
     {
       id: "store-04",
-      name: "Sách Hay Mỗi Ngày",
+      name: "Bánh mì Babimo",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/481780544_617203611201315_1022756740215591736_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGMgAVGJn153ntep1fdDHHUNQSG97eYNSc1BIb3t5g1J2dnYL5yYOEBbojh_PYDeVXUfVNg5B4Sy73tjz8k9srK&_nc_ohc=n10_elx9jvAQ7kNvgEJDTRq&_nc_oc=AdjvTqM5xiCTlvOeC3sYMBvGVqMI-vhhrb6eyOjRW6TNnrI1cR8hqy4gQ9DfS1drpV4&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=AqE8xXg4KGw4AvbGuACW0-e&oh=00_AYF4CFXCQQIk3cDKCLqtp87159TMHoMuqUV8Zj2ceGZn2w&oe=67D0E5D2",
+
       description: "Cửa hàng sách online và offline.",
       address: "456 Lê Duẩn, Hà Nội",
       phoneNumber: "0906234567",
@@ -94,7 +101,9 @@ const mockData = {
     },
     {
       id: "store-05",
-      name: "Thực Phẩm An Toàn",
+      name: "Siêu thị Mạnh Quân",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/482225011_10230023897601749_1367868190816497850_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGIu8DjALQRc-YPalcM08yncl7wigANYnZyXvCKAA1idi3wUYYUpmj_XcFT_7Li5ciwYqIzpdffxQ4ZCLd4Adpx&_nc_ohc=XWVkKW5AHOcQ7kNvgGKTzjt&_nc_oc=Adi_Xq3cc9hKvxlgHyE1W2wZiV0jw74nvO95fEIpOr8iKvszsqAakxXgcaacZl-AEF4&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=AItM0nx-B9izVy8gBeL-ZB_&oh=00_AYHcFxECYnxJnxgBEXY4iM52zTOewACYKho1ALqHp2qt4w&oe=67D0E8B4",
+
       description: "Cung cấp các loại thực phẩm tươi sống, đảm bảo an toàn.",
       address: "789 Cách Mạng Tháng Tám, TP.HCM",
       phoneNumber: "0907345678",
@@ -104,7 +113,9 @@ const mockData = {
     },
     {
       id: "store-06",
-      name: "Nội Thất Đẹp",
+      name: "CƠM GÀ XỐI MỠ ",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/481906032_1791313448327930_5501781855525142453_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEUbHq2mnLiVwjcO1eO_ckyq2xeWaMOlZWrbF5Zow6VlWCnrK3WXRtgA8DLgcUVPop602oSNbiRvrEnaqls9rz-&_nc_ohc=4P7hIsgi5VEQ7kNvgHDq_dD&_nc_oc=Adj0wv56Cmt11mhwk-wXcaBmR8pdL-wIAJG5X1uh-dVMLqRMtvzeCB5S3aAcUxK9GrI&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=A-XhWPkChHgJ5qxloWfjly3&oh=00_AYGVp_KqCiyRu00LIGWqrmqNA1p0qmObDu7VqAyhTk7SRQ&oe=67D0FB7C",
+
       description: "Cửa hàng nội thất cao cấp, thiết kế tinh tế.",
       address: "321 Trần Phú, Nha Trang",
       phoneNumber: "0908456789",
@@ -114,7 +125,9 @@ const mockData = {
     },
     {
       id: "store-07",
-      name: "Đồ Chơi Trẻ Em",
+      name: "Cơm gà Rubi",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/480968328_1791314168327858_8747734412048607581_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEdPy-rXNcu60dvKhviFCerRb-38nprP6VFv7fyems_pVFiZVKK03kUNmGhqabX84DDdgU_oH4TS0jMJF98sYId&_nc_ohc=Iw7kE0ckbIkQ7kNvgG-msMm&_nc_oc=AdjgdMA_OWw6yLZ_PiuVteWIB_h-5uOpZ8eeDQXVtv-uEJNUiC-d266QNPJRgR19YpY&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=AEfQDbsNuOfU9PAzmDWSBqa&oh=00_AYEn6bTZbRkRsJC78uLd_UdFcTtPYpGeWDps_ZYrAJWa4w&oe=67D0E60A",
+
       description: "Thế giới đồ chơi an toàn, sáng tạo cho bé.",
       address: "123 Hai Bà Trưng, Huế",
       phoneNumber: "0909567890",
@@ -124,7 +137,9 @@ const mockData = {
     },
     {
       id: "store-08",
-      name: "Điện Thoại Giá Rẻ",
+      name: "Cơm rang yên bái",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/476589460_1161907838937500_5046981902838161818_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEvEQySzIDxwaYMAH64qdkixDd6uGXNIbjEN3q4Zc0huNpvw8OMSRLuwZglWLSda4qvVaG8MuExKI7lHADTTUtl&_nc_ohc=vdbEMuk3nTMQ7kNvgGQgqra&_nc_oc=AdhUEQLZGF74Nu2IPyl_gpX1N1bgpyZtWP9oVda4ssYbAmSX-XrORva2rlvohQMn3WA&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=AdzPh3TukDCkxerGSzz_MPK&oh=00_AYFeC8cDsaC9_ZW3XrCNgVYByQZyJEtWE_nl11CBg1hKzg&oe=67D0EF1A",
+
       description: "Chuyên cung cấp các dòng điện thoại chính hãng giá tốt.",
       address: "456 Hùng Vương, Quy Nhơn",
       phoneNumber: "0901678901",
@@ -134,7 +149,9 @@ const mockData = {
     },
     {
       id: "store-09",
-      name: "Mỹ Phẩm Xách Tay",
+      name: "Hoà Lạc Food",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/482218253_1179518910509726_6158197625319619126_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeFI3BVMMC7nI1E99Xy-P0u7TxV1YDEjZsdPFXVgMSNmx9Q8PUhucO3bDphtq3GY0kuWmpVcXpKOdrSd9EQ_wADr&_nc_ohc=eZYxZmPJ_DAQ7kNvgFtjHrv&_nc_oc=Adh1S5L4Zm8sgfTpKlJO4q4ZVX1l4dAQt76vEKSek8MnUV6Jy0vDApDBjVlMgVXKzAQ&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=AsQn_h63MVWOGV4ZwkYiIyb&oh=00_AYFRrUoFVp-jS5GIDF5YWZyI1I-1ZWApbV824T2JJVPaIg&oe=67D0F42E",
+
       description: "Mỹ phẩm chính hãng từ các thương hiệu nổi tiếng.",
       address: "789 Nguyễn Huệ, Vũng Tàu",
       phoneNumber: "0902789012",
@@ -144,7 +161,9 @@ const mockData = {
     },
     {
       id: "store-10",
-      name: "Giày Dép Thời Trang",
+      name: "CƠM TÚN",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/481450913_659203583465930_407343378027212825_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeGPV8aeWAvlKUPBRHruNnz3tjPjlpEPDzC2M-OWkQ8PMA6LC_eJ1miGSFB-OWNZ7vu4ABOcl_zXLfQptLA-OqG1&_nc_ohc=RW1Ya8yRkOYQ7kNvgEylK2A&_nc_oc=AditpSqHhPYfzPgKORiuE0nBhD_zFBqhPuwold9ZrawPDp3kJ7bKXAs-N7Vzwg1GIV8&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=ARu393s4aUuPPv-ChZZJ7--&oh=00_AYGngvs1qsUyucTLY1HF_XkcHAX7ywDeQHjiRgtR6fZBog&oe=67D0DDD8",
+
       description: "Cửa hàng giày dép nam nữ, đa dạng mẫu mã.",
       address: "321 Ngô Quyền, Đà Lạt",
       phoneNumber: "0903890123",
@@ -154,7 +173,9 @@ const mockData = {
     },
     {
       id: "store-11",
-      name: "Văn Phòng Phẩm",
+      image:"https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/481241890_660056600135336_6006262383865675202_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeEG6XrzvGAv7va58UBR1Waddy-7xd6I5mR3L7vF3ojmZDqq9J6CCSTzVPA2VDo1KfsdvUopNDahtPWBSI6WOCha&_nc_ohc=-Ms6fCesvagQ7kNvgEcRQcM&_nc_oc=AdhFDy-HCwlrZ1Pl9e71ddIbQis0z4hFFgcVNxkNdexd1We7oCWHIqQIRAfNPJPoR1k&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=AdLd1KYNoe0NNYWbwneHJyc&oh=00_AYGqUuaKM-lTtfG801dF5PdMsS24OBVW99MoKH-15FDxjQ&oe=67D0E96E",
+
+      name: "PizzaAnd FastFood Tân Xã",
       description: "Chuyên cung cấp các mặt hàng văn phòng phẩm giá rẻ.",
       address: "123 Pasteur, Cần Thơ",
       phoneNumber: "0904901234",
@@ -167,13 +188,13 @@ const mockData = {
     {
       id: "product-01",
       storeId: "store-01",
-      name: "Áo Sơ Mi Nam Trắng",
+      name: "Thành Đạt - Hủ Tíu Nam Vang - Cô Bắc",
       description: "Áo sơ mi nam chất liệu cotton cao cấp.",
-      price: 350000,
-      category: "Thời trang nam",
+      price: 35000,
+      category: "Đồ ăn",
       stock: 50,
       imageUrl:
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf96yzqqr4ay63@resize_w450_nl.webp",
+        "https://down-tx-vn.img.susercontent.com/vn-11134513-7r98o-lsty1dq04m1lc2@resize_ss640x400!@crop_w640_h400_cT",
       sold: 150,
       cost: 200000,
       rating: 4.5,
@@ -181,13 +202,13 @@ const mockData = {
     {
       id: "product-02",
       storeId: "store-02",
-      name: "Dây Chuyền Bạc Nữ",
+      name: "CƠM TẤM 365",
       description: "Dây chuyền bạc 925 thiết kế tinh tế.",
-      price: 500000,
+      price: 49000,
       category: "Phụ kiện nữ",
       stock: 30,
       imageUrl:
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m5v88wnkro7rbc@resize_w450_nl.webp",
+        "https://down-tx-vn.img.susercontent.com/vn-11134513-7r98o-lsv4i3emzu10dc@resize_ss640x400!@crop_w640_h400_cT",
       sold: 220,
       cost: 250000,
       rating: 4.8,
@@ -195,13 +216,13 @@ const mockData = {
     {
       id: "product-03",
       storeId: "store-03",
-      name: "Tivi LED Samsung 55 inch",
+      name: "Bếp Shu Si",
       description: "Tivi LED 55 inch, độ phân giải 4K.",
-      price: 12000000,
+      price: 52000,
       category: "Điện máy",
       stock: 20,
       imageUrl:
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lyxdkpxhap4165@resize_w450_nl.webp",
+        "https://down-tx-vn.img.susercontent.com/vn-11134513-7r98o-lsv4hoat6h09e9@resize_ss640x400!@crop_w640_h400_cT",
       sold: 85,
       cost: 8000000,
       rating: 4.2,
@@ -209,13 +230,13 @@ const mockData = {
     {
       id: "product-04",
       storeId: "store-04",
-      name: "Đắc Nhân Tâm",
+      name: "Royaltea - Trà Sữa Đài Loan - Kim Giang",
       description: "Sách Đắc Nhân Tâm - Dale Carnegie",
-      price: 80000,
+      price: 40000,
       category: "Sách",
       stock: 100,
       imageUrl:
-        "https://down-vn.img.susercontent.com/file/vn-11134201-7ras8-m3a4guov37qkcf@resize_w450_nl.webp",
+        "https://down-tx-vn.img.susercontent.com/vn-11134513-7r98o-lsv4fe1zggxw4d@resize_ss640x400!@crop_w640_h400_cT",
       sold: 300,
       cost: 40000,
       rating: 4.9,
@@ -223,13 +244,13 @@ const mockData = {
     {
       id: "product-05",
       storeId: "store-05",
-      name: "Gạo ST25",
+      name: "Lò Bánh Miu - Bánh Ăn Kiêng - Shop Online",
       description: "Gạo thơm ST25, 5kg",
-      price: 120000,
+      price: 60000,
       category: "Thực phẩm",
       stock: 80,
       imageUrl:
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-llzwjmszz10f88@resize_w450_nl.webp",
+        "https://down-tx-vn.img.susercontent.com/vn-11134513-7r98o-lsv1ayx3y7d050@resize_ss640x400!@crop_w640_h400_cT",
       sold: 450,
       cost: 80000,
       rating: 4.7,
@@ -237,13 +258,13 @@ const mockData = {
     {
       id: "product-06",
       storeId: "store-06",
-      name: "Ghế Sofa Da",
+      name: "Gà Lan Anh - Nguyễn Đình Hoàn",
       description: "Ghế sofa da cao cấp, kiểu dáng hiện đại.",
-      price: 8500000,
+      price: 150000,
       category: "Nội thất",
       stock: 10,
       imageUrl:
-        "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lwmokz46lr6h8a@resize_w450_nl.webp",
+        "https://down-tx-vn.img.susercontent.com/vn-11134513-7r98o-lsv5504q5e3d9c@resize_ss640x400!@crop_w640_h400_cT",
       sold: 60,
       cost: 5000000,
       rating: 4.0,
@@ -863,7 +884,7 @@ const mockData = {
       sold: 50,
       cost: 400000,
       rating: 4.2,
-    }
+    },
   ],
   vouchers: [
     {
@@ -1018,10 +1039,20 @@ const mockData = {
 // Function to generate orders data
 function generateOrders(numOrders = 100) {
   const orders = [];
-  const productIds = mockData.products.map(p => p.id);
-  const storeIds = mockData.stores.map(s => s.id);
-  const userIds = mockData.users.filter(u => u.role === 'customer').map(u => u.id);
-  const orderStatuses = ["pending", "confirmed", "processing", "shipped", "delivered", "cancelled", "returned"];
+  const productIds = mockData.products.map((p) => p.id);
+  const storeIds = mockData.stores.map((s) => s.id);
+  const userIds = mockData.users
+    .filter((u) => u.role === "customer")
+    .map((u) => u.id);
+  const orderStatuses = [
+    "pending",
+    "confirmed",
+    "processing",
+    "shipped",
+    "delivered",
+    "cancelled",
+    "returned",
+  ];
 
   for (let i = 1; i <= numOrders; i++) {
     const orderDate = new Date();
@@ -1034,8 +1065,9 @@ function generateOrders(numOrders = 100) {
     let orderValue = 0;
 
     for (let j = 0; j < numItems; j++) {
-      const productId = productIds[Math.floor(Math.random() * productIds.length)];
-      const product = mockData.products.find(p => p.id === productId);
+      const productId =
+        productIds[Math.floor(Math.random() * productIds.length)];
+      const product = mockData.products.find((p) => p.id === productId);
       const quantity = Math.floor(Math.random() * 3) + 1; // 1 to 3 quantity
       const price = product.price;
       const productValue = price * quantity;
@@ -1044,7 +1076,7 @@ function generateOrders(numOrders = 100) {
     }
 
     orders.push({
-      id: `order-${String(i).padStart(3, '0')}`,
+      id: `order-${String(i).padStart(3, "0")}`,
       userId: userIds[Math.floor(Math.random() * userIds.length)],
       storeId: storeIds[Math.floor(Math.random() * storeIds.length)],
       products: productsInOrder,
